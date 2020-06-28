@@ -1,0 +1,7 @@
+<mat-toolbar>
+  <span>The Movies App</span>
+  <span class="example-spacer"></span>
+  <div *ngFor="let item of items">
+    <button mat-button routerLink="{{ item.link }}">{{ item.name }}</button>
+  </div>
+</mat-toolbar>
