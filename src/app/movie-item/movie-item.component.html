@@ -1,0 +1,9 @@
+<mat-selection-list #shoes [multiple]="false">
+  <mat-list-option *ngFor="let movie of movieList">
+    {{ movie.title }}
+    {{ movie.release }}
+    {{ movie.image }}
+  </mat-list-option>
+</mat-selection-list>
+
+<p>Option selected: {{ shoes.selectedOptions.selected }}</p>
