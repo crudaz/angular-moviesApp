@@ -11,9 +11,10 @@ import { MovieComponent } from './movie/movie.component';
 import { TopComponent } from './top/top.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MovieItemComponent } from './movie-item/movie-item.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, MovieComponent, TopComponent, NavBarComponent, MovieItemComponent],
+  declarations: [AppComponent, HomeComponent, MovieComponent, TopComponent, NavBarComponent, MovieItemComponent, MovieDetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
