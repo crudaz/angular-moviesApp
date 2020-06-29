@@ -1,0 +1,17 @@
+.app {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__navbar {
+    grid-column: span 4 / auto;
+  }
+
+  &__content {
+    grid-column: span 4 / auto;
+    height: calc(100% - 64px);
+  }
+}
