@@ -1,0 +1,40 @@
+.mat-card {
+  padding: 0;
+  border: 1px solid #e4e4e4;
+
+  .mat-card-header {
+    background-color: #e0e0e0;
+    border: 1px solid #e4e4e4;
+    padding-top: 10px;
+
+    & > * {
+      display: flex;
+    }
+  }
+
+  .mat-card-content {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    flex-direction: column;
+
+    .title {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+}
+
+.card {
+  &__content {
+    display: flex;
+
+    img {
+      height: 300px;
+      width: 200px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
