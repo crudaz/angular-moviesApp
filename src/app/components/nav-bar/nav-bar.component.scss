@@ -1,0 +1,13 @@
+.navbar {
+  &__spacer {
+    flex: 1 1 auto;
+  }
+
+  &__btn {
+    width: 98px;
+    &-active {
+      background-color: #fff;
+      color: #333;
+    }
+  }
+}
