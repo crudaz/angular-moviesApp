@@ -6,16 +6,15 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  title = "The Movies App";
-
-  navItems = [
+  title: string = "The Movies App";
+  navItems: Array<any> = [
     {
       name: "Home",
       link: "/home",
     },
     {
       name: "Add Movie",
-      link: "/add-movie",
+      link: "/add",
     },
     {
       name: "Top 5",
