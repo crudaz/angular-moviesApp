@@ -1,0 +1,16 @@
+<div class="movieItem">
+  <div class="movieItem__textContent">
+    <span class="movieItem__textContent__title">{{ movie.title }}</span>
+    <span class="movieItem__textContent__date"
+      >Release Date: {{ movie.release | date: "mediumDate" }}</span
+    >
+  </div>
+  <button
+    color="warn"
+    mat-icon-button
+    aria-label="delete movie"
+    matTooltip="delete movie"
+  >
+    <mat-icon (click)="handleClick(movie.id)">delete</mat-icon>
+  </button>
+</div>
