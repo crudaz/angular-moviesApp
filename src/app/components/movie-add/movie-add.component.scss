@@ -1,0 +1,50 @@
+.mat-card {
+  margin: 20px;
+  padding: 0;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e0e0e0;
+    border: 1px solid #e4e4e4;
+    height: 60px;
+
+    &-text {
+      margin-top: 10px;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      height: 35px;
+      font-size: 14px;
+      font-weight: normal;
+      margin-right: 10px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    &__section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .mat-form-field {
+        width: 100%;
+        padding: 0 20px;
+      }
+    }
+
+    button {
+      border: 0px;
+      padding: 10px;
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<div class="grid">
+  <div class="grid__list">
+    <mat-selection-list
+      #movies
+      [multiple]="false"
+      *ngIf="movies$ | async as movies"
+    >
+      <div *ngIf="movies.length > 0; else loading">
+        <mat-list-option *ngFor="let movie of movies" class="grid__list__item">
+          <movie-item
+            [movie]="movie"
+            (click)="handleMovie(movie)"
+            (eventDelete)="handleDelete($event)"
+          ></movie-item>
+        </mat-list-option>
+      </div>
+    </mat-selection-list>
+  </div>
+  <div class="grid__detail">
+    <div class="grid__detail__btn">
+      <button mat-button color="primary" routerLink="/add">
+        Add New Movie
+      </button>
+    </div>
+
+    <movie-detail *ngIf="showDetails" [item]="movieSelected"></movie-detail>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="empty">Empty list, please add new movies...</div>
+</ng-template>

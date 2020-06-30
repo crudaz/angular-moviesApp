@@ -1,0 +1,43 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  height: 100%;
+
+  &__list {
+    padding: 20px;
+
+    &__item {
+      border: 1px solid #e0e0e0;
+      height: 120px;
+      display: flex;
+      align-items: center;
+    }
+
+    .mat-list-option {
+      height: 120px;
+    }
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    &__btn {
+      padding-bottom: 20px;
+
+      button {
+        background-color: #3f51b5;
+        color: #fff;
+        float: right;
+      }
+    }
+  }
+}
+
+.empty {
+  font-size: 18px;
+  color: gray;
+  font-weight: bold;
+}

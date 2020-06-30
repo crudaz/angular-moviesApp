@@ -1,0 +1,13 @@
+<mat-list *ngIf="movies$ | async as movies" class="top">
+  <div class="top__title">TOP 5 Movies</div>
+  <mat-list-item *ngFor="let movie of movies.movies" class="top__list">
+    <div class="top__list__image">
+      <img src="{{ movie.image }}" />
+    </div>
+    <div class="top__list__text">
+      <div class="title" mat-line>{{ movie.title }}</div>
+      <div mat-line>Release Date: {{ movie.release | date }}</div>
+    </div>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>

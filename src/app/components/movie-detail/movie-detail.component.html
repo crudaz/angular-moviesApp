@@ -1,0 +1,16 @@
+<mat-card class="card" *ngIf="item">
+  <mat-card-header>
+    <mat-card-title>{{ item.title }}</mat-card-title>
+    <mat-card-subtitle>
+      {{ "release date" | uppercase }}:
+      {{ item.release | date }}</mat-card-subtitle
+    >
+  </mat-card-header>
+  <div class="card__content">
+    <img mat-card-image [src]="item.image" alt="" />
+    <mat-card-content>
+      <p class="title">Description</p>
+      <p>{{ item.description }}</p>
+    </mat-card-content>
+  </div>
+</mat-card>
