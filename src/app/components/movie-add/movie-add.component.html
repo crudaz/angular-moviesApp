@@ -1,0 +1,53 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Add Movie</mat-card-title>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!movieForm.valid"
+      (click)="addMovie()"
+    >
+      Save Movie
+    </button>
+  </mat-card-header>
+
+  <form class="mat-card__form" [formGroup]="movieForm">
+    <div class="mat-card__form__section">
+      <mat-form-field>
+        <mat-label>Movie Title</mat-label>
+        <input matInput formControlName="title" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Release date</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          formControlName="release"
+          placeholder="Release Date"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <input
+        type="file"
+        placeholder="Image"
+        formControlName="image"
+        accept="image/*"
+        (change)="onUploadImage($event)"
+      />
+    </div>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        placeholder="Description"
+        formControlName="description"
+        cdkTextareaAutosize
+        cdkAutosizeMinRows="6"
+      ></textarea>
+    </mat-form-field>
+  </form>
+</mat-card>
